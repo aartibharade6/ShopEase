@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    color: #1e293b;
+}
+
+.weather-container {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1d4ed8;
+    text-align: center;
+}
+
+.weather-container > p {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #94a3b8;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+#status {
+    margin: 18px 0;
+    color: #334155;
+}
+
+#weather-result {
+    margin-top: 25px;
+}
+
+#city-name,
+#weather-description,
+#updated-time {
+    text-align: center;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.weather-card {
+    padding: 20px;
+    text-align: center;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+}
+
+.weather-card h3 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+.weather-card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #64748b;
+}
+
+@media (min-width: 600px) {
+    .weather-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 420px) {
+    .weather-container {
+        padding: 18px;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+}
